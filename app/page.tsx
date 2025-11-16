@@ -12,26 +12,61 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Timeline section */}
+        {/* Timeline section - Work Experience */}
         <div className="mb-20">
           <TimelineCard
-            title="Real-Time Action Chunking with Large Models"
-            description="A real-time system for large VLAs that maintains precision and speed in the face of high latency."
-            date="June 9, 2025"
-            tags={["VLA", "Real-time", "Performance"]}
-          />
-          <TimelineCard
-            title="VLAs that Train Fast, Run Fast, and Generalize Better"
-            description="A method to train vision-language-action models that train quickly, maintain internet-scale knowledge, have high quality inference properties, and generalize well."
-            date="May 28, 2025"
-            tags={["Vision-Language", "Training", "Generalization"]}
-          />
-          <TimelineCard
-            title="π₀.5: a VLA with Open-World Generalization"
-            description="Our latest generalist policy, π0.5, extends π0 and enables open-world generalization. Our new model can control a mobile manipulator to clean up an entirely new kitchen or bedroom."
-            date="April 22, 2025"
+            title="Product Operations"
+            company="Commure · Full-time"
+            description="Worked on net new launches - onboarding to go live; currently driving tooling enablement internal & customer facing. Key pain point I help address: 'this task takes too much time'"
+            date="Mar 2024 - Present"
+            location="Mountain View, California"
+            logo="/commure-logo.jpg"
             highlighted
-            tags={["Foundation Model", "Open-world", "Manipulation"]}
+          />
+          <TimelineCard
+            title="Product Strategy - New Verticals"
+            company="T-Mobile · Internship"
+            description="Growth & scale across existing & emerging consumer product areas & businesses"
+            date="May 2023 - Aug 2023"
+            location="Greater Seattle Area"
+            logo="/t-mobile-logo.jpg"
+          />
+          <TimelineCard
+            title="Strategy Consultant"
+            company="Seasoned"
+            description="Drove the push for new vertical ventures in the gig industry"
+            date="Aug 2022 - Jan 2023"
+            location="San Francisco Bay Area"
+            logo="/seasoned-logo.jpg"
+          />
+          <TimelineCard
+            title="Product Engineer"
+            company="Wipro Limited · Full-time"
+            description="Managed e-commerce experience for 1000s of b2b customers; wrote code, fixed bugs, built tracking"
+            date="Jul 2021 - Jul 2022"
+            location="Bengaluru, Karnataka, India"
+            logo="/wipro-logo.png"
+            isLast
+          />
+        </div>
+
+        {/* Education section */}
+        <div className="mb-20">
+          <TimelineCard
+            title="Master of Engineering - MEng"
+            company="Duke University · Engineering Management"
+            description="focus on data, product and operations"
+            date="2022 - 2023"
+            location="Durham, North Carolina"
+            logo="/duke-logo.png"
+          />
+          <TimelineCard
+            title="Bachelor of Technology - BTech"
+            company="Vellore Institute of Technology · Electronics · Minor in Computer Science"
+            description="started with circuits, moved to software, then built circuits with software"
+            date="2017 - 2021"
+            location="Vellore, Tamil Nadu, India"
+            logo="/vit-logo.png"
             isLast
           />
         </div>
