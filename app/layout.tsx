@@ -4,10 +4,10 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
-import BackToTop from "@/components/BackToTop";
 import ReadingProgress from "@/components/ReadingProgress";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SideNav from "@/components/SideNav";
+import FloatingSocial from "@/components/FloatingSocial";
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -42,7 +42,7 @@ export default function RootLayout({
         <SideNav />
         <main className="min-h-screen">{children}</main>
         <Footer />
-        <BackToTop />
+        <FloatingSocial />
         <ReadingProgress />
       </body>
     </html>
