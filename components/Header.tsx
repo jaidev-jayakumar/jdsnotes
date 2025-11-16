@@ -1,12 +1,20 @@
 import Link from "next/link";
 import AnimatedLogo from "./AnimatedLogo";
+import LocationBadge from "./LocationBadge";
 
 export default function Header() {
   return (
-    <header className="border-b border-foreground/5 bg-background sticky top-0 z-40 backdrop-blur-sm bg-background/95">
+    <header className="border-b border-foreground/5 bg-background sticky top-0 z-40 backdrop-blur-sm bg-background/95 relative">
+      {/* Location badge - absolute positioned top right */}
+      <div className="absolute top-8 md:top-10 right-6 md:right-8 lg:right-12">
+        <LocationBadge />
+      </div>
+      
       <nav className="container-custom py-8 md:py-10">
         <div className="flex items-start justify-between">
           <AnimatedLogo />
+          
+          {/* Navigation */}
           <ul className="flex items-center gap-6 md:gap-8 pt-1">
             <li>
               <Link href="/" className="link-underline text-[14px] font-mono relative group">
