@@ -12,10 +12,13 @@ const config: Config = {
         background: "#EEEBE7",
         foreground: "#1A1A1A",
         muted: "#666666",
+        accent: "#8B4513", // Subtle burnt sienna accent
+        "accent-light": "#D2691E",
       },
       fontFamily: {
-        serif: ["var(--font-libre-baskerville)", "serif"],
-        mono: ["var(--font-ibm-plex-mono)", "monospace"],
+        serif: ["var(--font-libre-baskerville)", "Georgia", "serif"],
+        mono: ["var(--font-ibm-plex-mono)", "Courier New", "monospace"],
+        sans: ["var(--font-ibm-plex-mono)", "sans-serif"],
       },
       letterSpacing: {
         tighter: "-0.01em",

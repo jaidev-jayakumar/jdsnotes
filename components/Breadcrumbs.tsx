@@ -13,7 +13,7 @@ export default function Breadcrumbs() {
     <nav className="container-custom py-4 text-[11px] font-mono text-muted">
       <ol className="flex items-center gap-2">
         <li>
-          <Link href="/" className="hover:text-foreground transition-colors">
+          <Link href="/" className="hover:text-accent transition-colors">
             Home
           </Link>
         </li>
@@ -24,11 +24,11 @@ export default function Breadcrumbs() {
 
           return (
             <li key={path} className="flex items-center gap-2">
-              <span>/</span>
+              <span className="text-accent/40">/</span>
               {isLast ? (
-                <span className="text-foreground">{label}</span>
+                <span className="text-accent">{label}</span>
               ) : (
-                <Link href={href} className="hover:text-foreground transition-colors">
+                <Link href={href} className="hover:text-accent transition-colors">
                   {label}
                 </Link>
               )}

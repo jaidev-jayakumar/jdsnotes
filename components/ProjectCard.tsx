@@ -7,8 +7,8 @@ interface ProjectCardProps {
   date?: string;
   href?: string;
   highlighted?: boolean;
-  isLast?: boolean;
   tags?: string[];
+  index?: number;
 }
 
 export default function ProjectCard({
@@ -17,47 +17,65 @@ export default function ProjectCard({
   date,
   href,
   highlighted = false,
-  isLast = false,
   tags = [],
+  index = 0,
 }: ProjectCardProps) {
   const content = (
-    <article className="relative pl-0 group cursor-pointer">
-      {/* Timeline line (extends from top to bottom of card) */}
-      {!isLast && (
-        <div className="absolute left-[5.5px] top-0 bottom-0 w-[1px] bg-foreground/15 transition-colors duration-300 group-hover:bg-foreground/30" />
-      )}
+    <article className="group cursor-pointer border border-foreground/10 p-6 md:p-8 
+      transition-all duration-500 hover:border-accent/40 hover:shadow-[0_8px_30px_rgba(139,69,19,0.12)]
+      hover:-translate-y-1 bg-background hover:bg-accent/[0.02] relative overflow-hidden">
       
-      {/* Timeline dot */}
-      <div className="absolute left-0 top-[6px]">
-        <div className="w-3 h-3 bg-foreground rounded-full relative z-10 transition-transform duration-300 group-hover:scale-125" />
+      {/* Decorative corner element */}
+      <div className="absolute top-0 right-0 w-16 h-16 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <div className="absolute top-0 right-0 w-full h-[1px] bg-gradient-to-l from-accent to-transparent" />
+        <div className="absolute top-0 right-0 h-full w-[1px] bg-gradient-to-b from-accent to-transparent" />
       </div>
 
-      {/* Content */}
-      <div className={`ml-11 pb-10 transition-all duration-300 ${
-        highlighted 
-          ? 'border border-foreground p-5 mb-2 group-hover:shadow-[0_0_0_1px_rgba(26,26,26,0.3)] group-hover:translate-x-0.5' 
-          : 'group-hover:translate-x-1'
-      }`}>
-        <div className="flex items-start justify-between gap-6 mb-2">
-          <h3 className="text-[16px] font-bold font-mono leading-snug group-hover:opacity-70 transition-opacity flex-1">
+      {/* Index number */}
+      <div className="text-[11px] font-mono text-accent/40 mb-3 tracking-widest">
+        {String(index + 1).padStart(2, '0')}
+      </div>
+
+      {/* Title and date */}
+      <div className="mb-4">
+        <div className="flex items-start justify-between gap-4 mb-2">
+          <h3 className="text-[18px] md:text-[20px] font-serif leading-tight 
+            transition-colors duration-300 group-hover:text-accent flex-1">
             {title}
           </h3>
-          {date && (
-            <time className="text-[13px] text-muted whitespace-nowrap font-mono mt-0.5 transition-colors duration-300 group-hover:text-foreground">
-              {date}
-            </time>
+          {highlighted && (
+            <div className="px-2 py-1 text-[9px] font-mono uppercase tracking-wider 
+              bg-accent/10 text-accent border border-accent/30">
+              Featured
+            </div>
           )}
         </div>
-        <p className="text-[13px] text-muted leading-[1.6] font-mono transition-colors duration-300 group-hover:text-foreground/80">
-          {description}
-        </p>
-        {tags.length > 0 && (
-          <div className="mt-3 flex flex-wrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            {tags.map((tag) => (
-              <ProjectTag key={tag} label={tag} />
-            ))}
-          </div>
+        {date && (
+          <time className="text-[12px] font-mono text-muted">
+            {date}
+          </time>
         )}
+      </div>
+
+      {/* Description */}
+      <p className="text-[14px] leading-[1.7] text-muted mb-4 font-mono">
+        {description}
+      </p>
+
+      {/* Tags */}
+      {tags.length > 0 && (
+        <div className="flex flex-wrap gap-2 mt-4">
+          {tags.map((tag) => (
+            <ProjectTag key={tag} label={tag} />
+          ))}
+        </div>
+      )}
+
+      {/* Read more indicator */}
+      <div className="mt-6 flex items-center gap-2 text-[12px] font-mono text-accent 
+        opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-2">
+        <span>Explore</span>
+        <span>→</span>
       </div>
     </article>
   );
