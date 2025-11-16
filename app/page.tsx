@@ -8,7 +8,7 @@ export default function Home() {
       <Section>
         <div id="intro" className="mb-12">
           <p className="text-[15px] leading-[1.7] max-w-3xl font-mono">
-            Physical Intelligence is bringing general-purpose AI into the physical world. We are a group of engineers, scientists, roboticists, and company builders developing foundation models and learning algorithms to power the robots of today and the physically-actuated devices of the future.
+          I spend most of my time building healthcare infrastructure that lets providers focus on patients, not paperwork. I pick problems I've felt the pain of personally, then build software obsessively until reality matches the ideal. Infinite energy for my bets.
           </p>
         </div>
 
