@@ -16,17 +16,20 @@ export default function Home() {
             title="Real-Time Action Chunking with Large Models"
             description="A real-time system for large VLAs that maintains precision and speed in the face of high latency."
             date="June 9, 2025"
+            tags={["VLA", "Real-time", "Performance"]}
           />
           <ProjectCard
             title="VLAs that Train Fast, Run Fast, and Generalize Better"
             description="A method to train vision-language-action models that train quickly, maintain internet-scale knowledge, have high quality inference properties, and generalize well."
             date="May 28, 2025"
+            tags={["Vision-Language", "Training", "Generalization"]}
           />
           <ProjectCard
             title="π₀.5: a VLA with Open-World Generalization"
             description="Our latest generalist policy, π0.5, extends π0 and enables open-world generalization. Our new model can control a mobile manipulator to clean up an entirely new kitchen or bedroom."
             date="April 22, 2025"
             highlighted
+            tags={["Foundation Model", "Open-world", "Manipulation"]}
           />
           <ProjectCard
             title="Teaching Robots to Listen and Think Harder"

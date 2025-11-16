@@ -11,6 +11,43 @@
     @apply text-foreground bg-background font-mono;
   }
 
+  /* Custom text selection */
+  ::selection {
+    background-color: rgba(26, 26, 26, 0.15);
+    color: #1A1A1A;
+  }
+
+  ::-moz-selection {
+    background-color: rgba(26, 26, 26, 0.15);
+    color: #1A1A1A;
+  }
+
+  /* Subtle background texture */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.008) 2px,
+        rgba(0, 0, 0, 0.008) 4px
+      );
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Custom focus states */
+  *:focus-visible {
+    outline: 1px solid rgba(26, 26, 26, 0.4);
+    outline-offset: 2px;
+  }
+
   h1,
   h2,
   h3,
@@ -43,7 +80,7 @@
 
 @layer components {
   .link-underline {
-    @apply underline underline-offset-4 decoration-1;
+    @apply no-underline;
   }
 
   .section-padding {
@@ -52,6 +89,53 @@
 
   .container-custom {
     @apply max-w-4xl mx-auto px-6 md:px-8 lg:px-12;
+  }
+
+  /* Smooth fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  /* Fade out animation */
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .animate-fade-out {
+    animation: fadeOut 0.4s ease-out forwards;
+  }
+
+  /* Stagger animation for lists */
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in-up {
+    animation: slideInUp 0.6s ease-out forwards;
+    opacity: 0;
   }
 }
 

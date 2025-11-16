@@ -3,6 +3,10 @@ import { IBM_Plex_Mono, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ScrollProgress";
+import BackToTop from "@/components/BackToTop";
+import ReadingProgress from "@/components/ReadingProgress";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -31,9 +35,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${ibmPlexMono.variable} ${libreBaskerville.variable}`}>
       <body className="font-mono antialiased bg-background text-foreground">
+        <ScrollProgress />
         <Header />
-        <main>{children}</main>
+        <Breadcrumbs />
+        <main className="min-h-screen">{children}</main>
         <Footer />
+        <BackToTop />
+        <ReadingProgress />
       </body>
     </html>
   );
