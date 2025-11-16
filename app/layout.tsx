@@ -24,8 +24,8 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
-  title: "Physical Intelligence (π)",
-  description: "Bringing general-purpose AI into the physical world",
+  title: "Jaidev Jayakumar",
+  description: "Engineer & Builder - Portfolio and Research",
 };
 
 export default function RootLayout({
