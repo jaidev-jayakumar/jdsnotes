@@ -14,6 +14,12 @@ export default function WorkPage() {
 
         <div className="max-w-3xl">
           <NoteCard
+            title="applied to one school three days before the deadline and somehow ended up in san francisco"
+            date="11 Nov"
+            excerpt="i applied to one school. three days before the deadline. didn't even know if i wanted to go. spent months thinking success was about control. turns out it's about knowing when to let go and just move."
+            href="/work/applied-to-one-school"
+          />
+          <NoteCard
             title="somewhere between momentum and meaning"
             date="9 Nov"
             excerpt="everyone's trying to push mach 10. most get lost in the noise. some break through it. the difference isn't more information. it's knowing what actually matters when everything's moving this fast."

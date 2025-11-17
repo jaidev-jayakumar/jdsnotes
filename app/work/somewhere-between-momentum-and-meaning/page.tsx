@@ -17,12 +17,12 @@ export default function NotePage() {
           </header>
 
           {/* Featured Image */}
-          <div className="relative w-full h-64 md:h-96 mb-12 overflow-hidden">
+          <div className="relative w-full aspect-[16/9] mb-12 bg-foreground/5">
             <Image
               src="/substack1.jpg"
               alt="somewhere between momentum and meaning"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </div>
