@@ -39,7 +39,7 @@ export default function LocationBadge() {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative flex flex-col items-end">
       <button
         onClick={() => setShowSpots(!showSpots)}
         className="flex items-center gap-1.5 md:gap-2 px-2 md:px-3 py-1.5 md:py-2 border border-foreground/10 bg-background/80 backdrop-blur-sm
@@ -73,6 +73,16 @@ export default function LocationBadge() {
           )}
         </div>
       </button>
+      
+      {/* Source code link */}
+      <a
+        href="https://github.com/jaidev-jayakumar/jdsnotes"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-1 text-[9px] md:text-[10px] font-mono text-muted/40 hover:text-accent/60 transition-colors"
+      >
+        see source code
+      </a>
 
       {/* Dropdown with favorite spots */}
       {showSpots && (
