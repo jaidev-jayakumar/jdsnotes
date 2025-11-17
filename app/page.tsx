@@ -90,26 +90,28 @@ export default function Home() {
           />
           <ProjectCard
             index={1}
-            title="Open Sourcing π₀"
-            description="We are releasing the weights and code for π0 as well as our new π0-FAST autoregressive model."
-            date="February 4, 2025"
-            highlighted
-            tags={["Open Source", "Models"]}
-          />
-          <ProjectCard
-            index={2}
-            title="FAST: Efficient Robot Action Tokenization"
-            description="A new robot action tokenizer that allows us to train generalist policies 5x faster than previous models."
-            date="January 16, 2025"
-            tags={["Efficiency", "Architecture"]}
-          />
-          <ProjectCard
-            index={3}
             title="π₀: Our First Generalist Policy"
             description="Our first generalist policy, π0, a prototype model that combines large-scale multi-task and multi-robot data collection with a new network architecture."
             date="October 31, 2024"
             highlighted
             tags={["Foundation", "Multi-task"]}
+          />
+          <div className="md:col-span-2">
+            <ProjectCard
+              index={2}
+              title="pcp in your pocket"
+              description="AI-powered health companion that understands your bloodwork, symptoms, and health journey available 24/7. Extension of bloodrec with personalized medical insights."
+              highlighted
+              tags={["AI", "Health Tech"]}
+              swiperImages="/swiper-1.png,/swiper-2.png,/swiper-3.png,/swiper-4.png"
+            />
+          </div>
+          <ProjectCard
+            index={3}
+            title="FAST: Efficient Robot Action Tokenization"
+            description="A new robot action tokenizer that allows us to train generalist policies 5x faster than previous models."
+            date="January 16, 2025"
+            tags={["Efficiency", "Architecture"]}
           />
         </div>
       </Section>

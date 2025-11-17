@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ProjectTag from "./ProjectTag";
+import { ImageSwiper } from "./ImageSwiper";
 
 interface ProjectCardProps {
   title: string;
@@ -11,6 +12,7 @@ interface ProjectCardProps {
   tags?: string[];
   index?: number;
   image?: string;
+  swiperImages?: string;
 }
 
 export default function ProjectCard({
@@ -22,6 +24,7 @@ export default function ProjectCard({
   tags = [],
   index = 0,
   image,
+  swiperImages,
 }: ProjectCardProps) {
   const content = (
     <article className="group cursor-pointer border border-foreground/10 p-6 md:p-8 
@@ -39,8 +42,16 @@ export default function ProjectCard({
         {String(index + 1).padStart(2, '0')}
       </div>
 
-      {/* Project image */}
-      {image && (
+      {/* Project image or swiper */}
+      {swiperImages ? (
+        <div className="mb-4 flex justify-center">
+          <ImageSwiper 
+            images={swiperImages} 
+            cardWidth={180}
+            cardHeight={320}
+          />
+        </div>
+      ) : image ? (
         <div className="relative w-full h-48 mb-4 overflow-hidden bg-foreground/5">
           <Image
             src={image}
@@ -49,7 +60,7 @@ export default function ProjectCard({
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
-      )}
+      ) : null}
 
       {/* Title and date */}
       <div className="mb-4">
@@ -58,12 +69,7 @@ export default function ProjectCard({
             transition-colors duration-300 group-hover:text-accent flex-1">
             {title}
           </h3>
-          {highlighted && (
-            <div className="px-2 py-1 text-[9px] font-mono uppercase tracking-wider 
-              bg-accent/10 text-accent border border-accent/30">
-              Featured
-            </div>
-          )}
+         
         </div>
         {date && (
           <time className="text-[12px] font-mono text-muted">
