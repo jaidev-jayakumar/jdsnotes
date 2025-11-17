@@ -318,9 +318,8 @@ fontFamily: {
 
 This template includes three fun easter eggs you can customize or remove:
 
-1. **Konami Code** (`↑↑↓↓←→←→BA`): Edit `/components/KonamiCode.tsx` to customize the message and animation
-2. **Journey Animation**: Click the name in header - edit `/components/AnimatedLogo.tsx` to update your journey
-3. **Location Favorites**: Click location pin - edit `/components/LocationBadge.tsx` for your favorite spots
+1. **Journey Animation**: Click the name in header - edit `/components/AnimatedLogo.tsx` to update your journey
+2. **Location Favorites**: Click location pin - edit `/components/LocationBadge.tsx` for your favorite spots
 
 To remove an easter egg, simply remove the component from `/app/layout.tsx`.
 
@@ -398,10 +397,6 @@ jdsnotes/
 ## 🤝 Contributing
 
 Feel free to fork this template and make it your own! If you build something cool or make improvements, I'd love to see it.
-
-## 📄 License
-
-MIT - feel free to use this template for your personal portfolio!
 
 ## 💡 Tips
 
