@@ -13,6 +13,7 @@ interface ProjectCardProps {
   index?: number;
   image?: string;
   swiperImages?: string;
+  video?: string;
 }
 
 export default function ProjectCard({
@@ -25,11 +26,12 @@ export default function ProjectCard({
   index = 0,
   image,
   swiperImages,
+  video,
 }: ProjectCardProps) {
   const content = (
     <article className="group cursor-pointer border border-foreground/10 p-6 md:p-8 
       transition-all duration-500 hover:border-accent/40 hover:shadow-[0_8px_30px_rgba(139,69,19,0.12)]
-      hover:-translate-y-1 bg-background hover:bg-accent/[0.02] relative overflow-hidden">
+      hover:-translate-y-1 bg-background hover:bg-accent/[0.02] relative overflow-hidden h-full flex flex-col">
       
       {/* Decorative corner element */}
       <div className="absolute top-0 right-0 w-16 h-16 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -42,13 +44,24 @@ export default function ProjectCard({
         {String(index + 1).padStart(2, '0')}
       </div>
 
-      {/* Project image or swiper */}
+      {/* Project image, video or swiper */}
       {swiperImages ? (
         <div className="mb-4 flex justify-center">
           <ImageSwiper 
             images={swiperImages} 
             cardWidth={180}
             cardHeight={320}
+          />
+        </div>
+      ) : video ? (
+        <div className="relative w-full h-48 mb-4 overflow-hidden bg-foreground/5">
+          <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
           />
         </div>
       ) : image ? (
@@ -79,7 +92,7 @@ export default function ProjectCard({
       </div>
 
       {/* Description */}
-      <p className="text-[14px] leading-[1.7] text-muted mb-4 font-mono">
+      <p className="text-[14px] leading-[1.7] text-muted mb-4 font-mono flex-1">
         {description}
       </p>
 

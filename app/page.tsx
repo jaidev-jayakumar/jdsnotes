@@ -90,11 +90,11 @@ export default function Home() {
           />
           <ProjectCard
             index={1}
-            title="π₀: Our First Generalist Policy"
-            description="Our first generalist policy, π0, a prototype model that combines large-scale multi-task and multi-robot data collection with a new network architecture."
-            date="October 31, 2024"
-            highlighted
-            tags={["Foundation", "Multi-task"]}
+            title="easymvp"
+            description="Connecting technical builders with non-technical founders to ship faster. Bridge the gap between vision and execution."
+            href="https://easymvp.io"
+            tags={["Marketplace", "Community"]}
+            image="/easymvp.png"
           />
           <div className="md:col-span-2">
             <ProjectCard
@@ -106,12 +106,29 @@ export default function Home() {
               swiperImages="/swiper-1.png,/swiper-2.png,/swiper-3.png,/swiper-4.png"
             />
           </div>
+          <div className="md:col-span-2">
+            <ProjectCard
+              index={3}
+              title="kairo"
+              description="AI astrology companion that offers personalized cosmic insights, daily guidance, and chart interpretations. kaira is your pocket astrologer for life's questions."
+              tags={["AI", "iOS"]}
+              swiperImages="/kairo1.png,/kairo2.png,/kairo3.png,/kairo4.png,/kairo5.png"
+            />
+          </div>
           <ProjectCard
-            index={3}
-            title="FAST: Efficient Robot Action Tokenization"
-            description="A new robot action tokenizer that allows us to train generalist policies 5x faster than previous models."
-            date="January 16, 2025"
-            tags={["Efficiency", "Architecture"]}
+            index={4}
+            title="behai.ai"
+            description="Fasttrack your success to land your dream job. Resume revamp, cold email templates, and behavioral interview prep powered by AI."
+            href="https://behai.ai"
+            tags={["Career", "AI"]}
+            image="/behai.png"
+          />
+          <ProjectCard
+            index={5}
+            title="Smart Ventilator System"
+            description="Built with a box of scraps, some circuits, and a bit of code. Custom ventilator control system engineered from the ground up."
+            tags={["Hardware", "IoT"]}
+            video="/ventilator.mp4"
           />
         </div>
       </Section>
