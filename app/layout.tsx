@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
 import ReadingProgress from "@/components/ReadingProgress";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import SideNav from "@/components/SideNav";
 import FloatingSocial from "@/components/FloatingSocial";
 
 const ibmPlexMono = IBM_Plex_Mono({
@@ -39,7 +38,6 @@ export default function RootLayout({
         <ScrollProgress />
         <Header />
         <Breadcrumbs />
-        <SideNav />
         <main className="min-h-screen">{children}</main>
         <Footer />
         <FloatingSocial />
