@@ -14,6 +14,12 @@ export default function WorkPage() {
 
         <div className="max-w-3xl">
           <NoteCard
+            title="optimizing for maximum throughput per unit time"
+            date="15 Nov"
+            excerpt="i've had people tell me i need a break. like genuinely concerned, 'you're gonna burn out' type stuff. but here's the thing — i've never felt like that. my mind is restless. i want to keep at it."
+            href="/work/optimizing-for-maximum-throughput"
+          />
+          <NoteCard
             title="applied to one school three days before the deadline and somehow ended up in san francisco"
             date="11 Nov"
             excerpt="i applied to one school. three days before the deadline. didn't even know if i wanted to go. spent months thinking success was about control. turns out it's about knowing when to let go and just move."
