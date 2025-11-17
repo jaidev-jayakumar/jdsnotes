@@ -87,6 +87,7 @@ export default function Home() {
             href="https://bloodrec.com"
             tags={["Health Tech", "Consumer"]}
             image="/bloodrec.png"
+            techStack={["React", "Next.js", "JavaScript", "Tailwind", "Supabase", "OpenRouter"]}
           />
           <ProjectCard
             index={1}
@@ -95,6 +96,7 @@ export default function Home() {
             href="https://easymvp.io"
             tags={["Marketplace", "Community"]}
             image="/easymvp.png"
+            techStack={["Next.js", "React", "TypeScript", "MongoDB", "Resend", "Render"]}
           />
           <div className="md:col-span-2">
             <ProjectCard
@@ -104,6 +106,8 @@ export default function Home() {
               highlighted
               tags={["AI", "Health Tech"]}
               swiperImages="/swiper-1.png,/swiper-2.png,/swiper-3.png,/swiper-4.png"
+              techStack={["React", "Next.js", "Supabase", "Twillio","Vercel","OpenRouter"]}
+              href="https://bloodrec.com"
             />
           </div>
           <div className="md:col-span-2">
@@ -113,15 +117,18 @@ export default function Home() {
               description="AI astrology companion that offers personalized cosmic insights, daily guidance, and chart interpretations. kaira is your pocket astrologer for life's questions."
               tags={["AI", "iOS"]}
               swiperImages="/kairo1.png,/kairo2.png,/kairo3.png,/kairo4.png,/kairo5.png"
+              techStack={["Swift", "SwiftUI", "Firebase"]}
+              githubUrl="https://github.com/jaidev-jayakumar/kairo"
             />
           </div>
           <ProjectCard
             index={4}
             title="behai.ai"
-            description="Fasttrack your success to land your dream job. Resume revamp, cold email templates, and behavioral interview prep powered by AI."
+            description="Fasttrack your success to land your dream job. Resume revamp, cold email templates, and behavioral interview prep powered by AI. 600+ users to date."
             href="https://behai.ai"
             tags={["Career", "AI"]}
             image="/behai.png"
+            techStack={["Flask", "Python"]}
           />
           <ProjectCard
             index={5}
@@ -129,6 +136,7 @@ export default function Home() {
             description="Built with a box of scraps, some circuits, and a bit of code. Custom ventilator control system engineered from the ground up."
             tags={["Hardware", "IoT"]}
             video="/ventilator.mp4"
+            techStack={["Arduino", "C++", "Sensor interfacing", "NodeMCU", "Microcontroller programming"]}
           />
         </div>
       </Section>

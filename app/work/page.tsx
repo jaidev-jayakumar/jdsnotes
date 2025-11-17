@@ -32,6 +32,21 @@ export default function WorkPage() {
             href="/work/somewhere-between-momentum-and-meaning"
           />
         </div>
+
+        {/* Substack link */}
+        <div className="mt-16 pt-8 border-t border-foreground/10 max-w-3xl">
+          <a
+            href="https://jdsnotes.substack.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 text-[14px] font-mono transition-all duration-300 hover:translate-x-2"
+          >
+            <span className="text-muted group-hover:text-accent transition-colors">
+              check out my substack
+            </span>
+            <span className="text-accent">→</span>
+          </a>
+        </div>
       </Section>
     </>
   );
