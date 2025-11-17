@@ -88,17 +88,17 @@ export default function AnimatedLogo() {
             {/* City stops with emojis and vibes - using percentages for responsive scaling */}
             <div className="absolute" style={{ left: '5.5%', top: '83%' }}>
               <span className="text-[20px]">🌴</span>
-              <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">Kerala</div>
+              <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">Kerala, India</div>
               <div className="text-[8px] font-mono text-muted/60 italic">home home</div>
             </div>
             <div className="absolute" style={{ left: '27%', top: '56%' }}>
               <span className="text-[20px]">🎓</span>
-              <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">Vellore</div>
+              <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">Vellore, India</div>
               <div className="text-[8px] font-mono text-muted/60 italic">undergrad years</div>
             </div>
             <div className="absolute" style={{ left: '51%', top: '33%' }}>
               <span className="text-[20px]">🏀</span>
-              <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">Durham</div>
+              <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">Durham, NC</div>
               <div className="text-[8px] font-mono text-muted/60 italic">duke days</div>
             </div>
             <div className="absolute" style={{ left: '82%', top: '22%' }}>
