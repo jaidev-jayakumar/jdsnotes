@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { ImageSwiper } from "./ImageSwiper";
+import { ReactNode } from "react";
 
 interface ProjectCardProps {
   title: string;
-  description: string;
+  description: string | ReactNode;
   date?: string;
   href?: string;
   highlighted?: boolean;

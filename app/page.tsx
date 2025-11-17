@@ -46,6 +46,14 @@ export default function Home() {
             date="Jul 2021 - Jul 2022"
             location="Bengaluru, Karnataka, India"
             logo="/wipro-logo.png"
+          />
+          <TimelineCard
+            title="Strategy & Ops"
+            company="AIESEC in India · Full-time"
+            description="facilitated internship opportunities for 100+ students globally; gtm, sales, lot of cold pitches, handling $"
+            date="Jan 2018 - Jun 2019"
+            location="Vellore, Tamil Nadu"
+            logo="/aiesec.png"
             isLast
           />
         </div>
@@ -83,7 +91,13 @@ export default function Home() {
           <ProjectCard
             index={0}
             title="bloodrec"
-            description="Duolingo for your bloodwork. Scaled to 2k+ users, Product Hunt #14 product of the day. Applied to YC (didn't make it), received $2k microgrant from LocalHost."
+            description={
+              <>
+                Duolingo for your bloodwork. Scaled to{' '}
+                <span className="text-accent font-semibold">2k+ users</span>, Product Hunt{' '}
+                <span className="text-accent font-semibold">#14</span> product of the day. Applied to YC (didn't make it), received $2k microgrant from LocalHost.
+              </>
+            }
             href="https://bloodrec.com"
             tags={["Health Tech", "Consumer"]}
             image="/bloodrec.png"
@@ -124,7 +138,12 @@ export default function Home() {
           <ProjectCard
             index={4}
             title="behai.ai"
-            description="Fasttrack your success to land your dream job. Resume revamp, cold email templates, and behavioral interview prep powered by AI. 600+ users to date."
+            description={
+              <>
+                Fasttrack your success to land your dream job. Resume revamp, cold email templates, and behavioral interview prep powered by AI.{' '}
+                <span className="text-accent font-semibold">600+ users</span> to date.
+              </>
+            }
             href="https://behai.ai"
             tags={["Career", "AI"]}
             image="/behai.png"
