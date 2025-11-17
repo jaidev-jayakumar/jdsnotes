@@ -42,17 +42,17 @@ export default function LocationBadge() {
     <div className="relative">
       <button
         onClick={() => setShowSpots(!showSpots)}
-        className="flex items-center gap-2 px-3 py-2 border border-foreground/10 bg-background/80 backdrop-blur-sm
+        className="flex items-center gap-1.5 md:gap-2 px-2 md:px-3 py-1.5 md:py-2 border border-foreground/10 bg-background/80 backdrop-blur-sm
           hover:border-accent/30 transition-all duration-300 cursor-pointer group"
         title="Click to see my favorite SF spots"
       >
         {/* Pin emoji - rotates on hover */}
-        <span className="text-[14px] transition-transform duration-300 group-hover:scale-110">
+        <span className="text-[12px] md:text-[14px] transition-transform duration-300 group-hover:scale-110">
           📍
         </span>
         
         {/* Golden Gate Bridge tiny image */}
-        <div className="relative w-6 h-6 overflow-hidden">
+        <div className="relative w-5 h-5 md:w-6 md:h-6 overflow-hidden">
           <Image
             src="/golden-gate.jpg"
             alt="Golden Gate Bridge"
@@ -63,11 +63,11 @@ export default function LocationBadge() {
         
         {/* Location and time */}
         <div className="flex flex-col">
-          <span className="text-[11px] font-mono text-muted whitespace-nowrap">
+          <span className="text-[10px] md:text-[11px] font-mono text-muted whitespace-nowrap">
             San Francisco, CA
           </span>
           {currentTime && (
-            <span className="text-[10px] font-mono text-muted/60">
+            <span className="text-[9px] md:text-[10px] font-mono text-muted/60">
               {currentTime}
             </span>
           )}
@@ -76,8 +76,8 @@ export default function LocationBadge() {
 
       {/* Dropdown with favorite spots */}
       {showSpots && (
-        <div className="absolute top-full right-0 mt-2 w-72 border border-foreground/10 bg-background shadow-lg 
-          animate-fadeIn z-50 p-4 max-h-96 overflow-y-auto">
+        <div className="absolute top-full right-0 mt-2 w-[85vw] md:w-72 max-w-[300px] border border-foreground/10 bg-background shadow-lg 
+          animate-fadeIn z-50 p-3 md:p-4 max-h-[70vh] md:max-h-96 overflow-y-auto">
           <div className="mb-3 pb-2 border-b border-foreground/10">
             <p className="text-[11px] font-mono text-accent uppercase tracking-wider">
               my favorite sf spots

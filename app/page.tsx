@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <>
       <Section>
-        <div id="intro" className="mb-12">
-          <p className="text-[15px] leading-[1.7] max-w-3xl font-mono">
+        <div id="intro" className="mb-10 md:mb-12">
+          <p className="text-[14px] md:text-[15px] leading-[1.7] max-w-3xl font-mono">
           I spend most of my time building healthcare infrastructure that lets providers focus on patients, not paperwork. I pick problems I've felt the pain of personally, then build software obsessively until reality matches the ideal. Infinite energy for my bets.
           </p>
         </div>
 
         {/* Timeline section - Work Experience */}
-        <div className="mb-20">
+        <div className="mb-16 md:mb-20">
           <TimelineCard
             title="Product Operations"
             company="Commure · Full-time"
@@ -59,7 +59,7 @@ export default function Home() {
         </div>
 
         {/* Education section */}
-        <div className="mb-20">
+        <div className="mb-16 md:mb-20">
           <TimelineCard
             title="Master of Engineering - MEng"
             company="Duke University · Engineering Management"
@@ -79,15 +79,15 @@ export default function Home() {
           />
         </div>
 
-        <div id="research" className="mb-8">
-          <h2 className="text-2xl md:text-3xl font-serif mb-3">I like to build software</h2>
-          <p className="text-[13px] font-mono text-muted mb-8">
+        <div id="research" className="mb-6 md:mb-8">
+          <h2 className="text-xl md:text-3xl font-serif mb-2 md:mb-3">I like to build software</h2>
+          <p className="text-[12px] md:text-[13px] font-mono text-muted mb-6 md:mb-8">
           Turning personal frustration into working software
           </p>
         </div>
 
         {/* Grid cards section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <ProjectCard
             index={0}
             title="bloodrec"

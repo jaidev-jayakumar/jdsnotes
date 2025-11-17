@@ -36,7 +36,7 @@ export default function AnimatedLogo() {
       >
         <div className="relative">
           {/* Main title */}
-          <h1 className="text-3xl md:text-[2.5rem] font-serif leading-tight transition-all duration-300">
+          <h1 className="text-[22px] md:text-[2.5rem] font-serif leading-tight transition-all duration-300">
             <span className="relative inline-block">
               Jaidev Jayakumar 
               {/* Accent line under name */}
@@ -48,8 +48,8 @@ export default function AnimatedLogo() {
             </span>
           </h1>
           
-          {/* Tagline appears on hover */}
-          <div className={`absolute -bottom-6 left-0 text-[10px] font-mono text-accent uppercase tracking-widest transition-all duration-300 ${
+          {/* Tagline appears on hover - hide on mobile */}
+          <div className={`hidden md:block absolute -bottom-6 left-0 text-[10px] font-mono text-accent uppercase tracking-widest transition-all duration-300 ${
             isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
           }`}>
             improving healthcare by {'>'}=1%
@@ -59,8 +59,8 @@ export default function AnimatedLogo() {
 
       {/* Journey animation */}
       {showPlaces && (
-        <div className="absolute top-full left-0 mt-8 w-[550px] border border-foreground/10 bg-background shadow-lg 
-          animate-fadeIn z-50 p-6">
+        <div className="absolute top-full left-0 mt-8 w-[90vw] max-w-[550px] md:w-[550px] border border-foreground/10 bg-background shadow-lg 
+          animate-fadeIn z-50 p-4 md:p-6">
           <div className="mb-6">
             <p className="text-[11px] font-mono text-accent uppercase tracking-wider">
               places i've called home
@@ -70,7 +70,7 @@ export default function AnimatedLogo() {
           {/* Journey path visualization */}
           <div className="relative w-full h-[180px] mb-4">
             {/* Wavy diagonal path with gradient */}
-            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 550 180" preserveAspectRatio="none">
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 550 180" preserveAspectRatio="xMidYMid meet">
               <defs>
                 <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stopColor="#8B4513" stopOpacity="0.4" />
@@ -85,23 +85,23 @@ export default function AnimatedLogo() {
               />
             </svg>
             
-            {/* City stops with emojis and vibes */}
-            <div className="absolute" style={{ left: '30px', top: '150px' }}>
+            {/* City stops with emojis and vibes - using percentages for responsive scaling */}
+            <div className="absolute" style={{ left: '5.5%', top: '83%' }}>
               <span className="text-[20px]">🌴</span>
-              <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">Kerala, India</div>
+              <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">Kerala</div>
               <div className="text-[8px] font-mono text-muted/60 italic">home home</div>
             </div>
-            <div className="absolute" style={{ left: '150px', top: '100px' }}>
+            <div className="absolute" style={{ left: '27%', top: '56%' }}>
               <span className="text-[20px]">🎓</span>
-              <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">Vellore, India</div>
+              <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">Vellore</div>
               <div className="text-[8px] font-mono text-muted/60 italic">undergrad years</div>
             </div>
-            <div className="absolute" style={{ left: '280px', top: '60px' }}>
+            <div className="absolute" style={{ left: '51%', top: '33%' }}>
               <span className="text-[20px]">🏀</span>
-              <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">Durham, NC</div>
+              <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">Durham</div>
               <div className="text-[8px] font-mono text-muted/60 italic">duke days</div>
             </div>
-            <div className="absolute" style={{ left: '450px', top: '40px' }}>
+            <div className="absolute" style={{ left: '82%', top: '22%' }}>
               <span className="text-[20px]">🌉</span>
               <div className="text-[9px] font-mono text-muted mt-1 whitespace-nowrap">San Francisco</div>
               <div className="text-[8px] font-mono text-muted/60 italic">home now</div>
@@ -109,17 +109,18 @@ export default function AnimatedLogo() {
             
             {/* Animated bike - follows the path exactly */}
             {animating && (
-              <div 
-                className="absolute text-[24px] z-20"
-                style={{
-                  offsetPath: 'path("M 30 150 Q 150 120, 200 80 T 460 40")',
-                  offsetRotate: '0deg',
-                  animation: 'bikeRide 6s ease-in-out forwards',
-                  transform: 'scaleX(-1) translate(-12px, -12px)' // Flip and center on path
-                }}
-              >
-                🚴
-              </div>
+              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 550 180" preserveAspectRatio="xMidYMid meet">
+                <text 
+                  fontSize="24" 
+                  style={{
+                    offsetPath: 'path("M 30 150 Q 150 120, 200 80 T 460 40")',
+                    animation: 'bikeRide 6s ease-in-out forwards',
+                    transform: 'scaleX(-1)'
+                  }}
+                >
+                  🚴
+                </text>
+              </svg>
             )}
           </div>
           
@@ -145,6 +146,12 @@ export default function AnimatedLogo() {
           100% { 
             offset-distance: 100%;
           }
+        }
+        
+        /* Convert viewBox coordinates to work with percentage-based path */
+        svg {
+          width: 100%;
+          height: 100%;
         }
       `}</style>
     </div>

@@ -5,9 +5,9 @@ export default function WorkPage() {
   return (
     <>
       <Section>
-        <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-serif mb-4">Notes</h1>
-          <p className="text-[14px] leading-[1.7] max-w-2xl font-mono text-muted">
+        <div className="mb-12 md:mb-16">
+          <h1 className="text-3xl md:text-5xl font-serif mb-3 md:mb-4">Notes</h1>
+          <p className="text-[13px] md:text-[14px] leading-[1.7] max-w-2xl font-mono text-muted">
             Thoughts, reflections, and lessons learned along the way.
           </p>
         </div>
@@ -37,12 +37,12 @@ export default function WorkPage() {
         </div>
 
         {/* Substack link */}
-        <div className="mt-16 pt-8 border-t border-foreground/10 max-w-3xl">
+        <div className="mt-12 md:mt-16 pt-6 md:pt-8 border-t border-foreground/10 max-w-3xl">
           <a
             href="https://jdsnotes.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-3 text-[14px] font-mono transition-all duration-300 hover:translate-x-2"
+            className="group flex items-center gap-2 md:gap-3 text-[13px] md:text-[14px] font-mono transition-all duration-300 hover:translate-x-2"
           >
             <span className="text-muted group-hover:text-accent transition-colors">
               check out my substack
