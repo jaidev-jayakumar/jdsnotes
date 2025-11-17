@@ -24,7 +24,7 @@ export default function Header() {
             </li>
             <li>
               <Link href="/work" className="link-underline text-[14px] font-mono relative group">
-                <span className="relative z-10 transition-colors group-hover:text-accent">Research</span>
+                <span className="relative z-10 transition-colors group-hover:text-accent">Notes</span>
                 <span className="absolute inset-x-0 -bottom-0.5 h-px bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </Link>
             </li>
