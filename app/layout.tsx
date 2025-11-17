@@ -7,6 +7,7 @@ import ScrollProgress from "@/components/ScrollProgress";
 import ReadingProgress from "@/components/ReadingProgress";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingSocial from "@/components/FloatingSocial";
+import { Analytics } from "@vercel/analytics/next";
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
         <Footer />
         <FloatingSocial />
         <ReadingProgress />
+        <Analytics />
       </body>
     </html>
   );
