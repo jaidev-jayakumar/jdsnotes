@@ -25,7 +25,7 @@ const libreBaskerville = Libre_Baskerville({
 
 export const metadata: Metadata = {
   title: "Jaidev Jayakumar",
-  description: "Engineer & Builder - Portfolio and Research",
+  description: "Product Operations at Commure",
 };
 
 export default function RootLayout({
