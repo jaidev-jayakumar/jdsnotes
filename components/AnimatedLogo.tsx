@@ -69,15 +69,19 @@ export default function AnimatedLogo() {
           
           {/* Journey path visualization */}
           <div className="relative w-full h-[180px] mb-4">
-            {/* Wavy diagonal path */}
+            {/* Wavy diagonal path with gradient */}
             <svg className="absolute inset-0 w-full h-full" viewBox="0 0 550 180" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#8B4513" stopOpacity="0.4" />
+                  <stop offset="100%" stopColor="#8B4513" stopOpacity="0.05" />
+                </linearGradient>
+              </defs>
               <path 
                 d="M 30 150 Q 150 120, 200 80 T 460 40" 
-                stroke="currentColor" 
+                stroke="url(#pathGradient)" 
                 strokeWidth="3" 
-                strokeDasharray="8,8"
                 fill="none"
-                className="text-accent/30"
               />
             </svg>
             
