@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ProjectTag from "./ProjectTag";
 
 interface ProjectCardProps {
@@ -9,6 +10,7 @@ interface ProjectCardProps {
   highlighted?: boolean;
   tags?: string[];
   index?: number;
+  image?: string;
 }
 
 export default function ProjectCard({
@@ -19,6 +21,7 @@ export default function ProjectCard({
   highlighted = false,
   tags = [],
   index = 0,
+  image,
 }: ProjectCardProps) {
   const content = (
     <article className="group cursor-pointer border border-foreground/10 p-6 md:p-8 
@@ -35,6 +38,18 @@ export default function ProjectCard({
       <div className="text-[11px] font-mono text-accent/40 mb-3 tracking-widest">
         {String(index + 1).padStart(2, '0')}
       </div>
+
+      {/* Project image */}
+      {image && (
+        <div className="relative w-full h-48 mb-4 overflow-hidden bg-foreground/5">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+      )}
 
       {/* Title and date */}
       <div className="mb-4">

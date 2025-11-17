@@ -72,9 +72,9 @@ export default function Home() {
         </div>
 
         <div id="research" className="mb-8">
-          <h2 className="text-2xl md:text-3xl font-serif mb-3">Featured Projects</h2>
+          <h2 className="text-2xl md:text-3xl font-serif mb-3">I like to build software</h2>
           <p className="text-[13px] font-mono text-muted mb-8">
-            In-depth research and development
+          Turning personal frustration into working software
           </p>
         </div>
 
@@ -82,10 +82,11 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ProjectCard
             index={0}
-            title="Teaching Robots to Listen and Think Harder"
-            description="A method for robots to think through complex tasks step by step, incorporating human-in-the-loop feedback."
-            date="February 26, 2025"
-            tags={["Multi-modal", "Reasoning"]}
+            title="bloodrec"
+            description="Duolingo for your bloodwork. Scaled to 2k+ users, Product Hunt #14 product of the day. Applied to YC (didn't make it), received $2k microgrant from LocalHost."
+            href="https://bloodrec.com"
+            tags={["Health Tech", "Consumer"]}
+            image="/bloodrec.png"
           />
           <ProjectCard
             index={1}
