@@ -49,7 +49,7 @@ export default function Home() {
           />
           <TimelineCard
             title="Strategy & Ops"
-            company="AIESEC in India · Full-time"
+            company="AIESEC in India · Part-time"
             description="facilitated internship opportunities for 100+ students globally; gtm, sales, lot of cold pitches, handling $"
             date="Jan 2018 - Jun 2019"
             location="Vellore, Tamil Nadu"
