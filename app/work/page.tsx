@@ -18,18 +18,21 @@ export default function WorkPage() {
             date="15 Nov"
             excerpt="i've had people tell me i need a break. like genuinely concerned, 'you're gonna burn out' type stuff. but here's the thing — i've never felt like that. my mind is restless. i want to keep at it."
             href="/work/optimizing-for-maximum-throughput"
+            readTime="4 min read"
           />
           <NoteCard
             title="applied to one school three days before the deadline and somehow ended up in san francisco"
             date="11 Nov"
             excerpt="i applied to one school. three days before the deadline. didn't even know if i wanted to go. spent months thinking success was about control. turns out it's about knowing when to let go and just move."
             href="/work/applied-to-one-school"
+            readTime="5 min read"
           />
           <NoteCard
             title="somewhere between momentum and meaning"
             date="9 Nov"
             excerpt="everyone's trying to push mach 10. most get lost in the noise. some break through it. the difference isn't more information. it's knowing what actually matters when everything's moving this fast."
             href="/work/somewhere-between-momentum-and-meaning"
+            readTime="2 min read"
           />
         </div>
 
