@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const favoritePlaces = [
   { name: "Reveille", emoji: "☕", vibe: "work and chill" },
@@ -20,6 +20,7 @@ const favoritePlaces = [
 export default function LocationBadge() {
   const [currentTime, setCurrentTime] = useState<string>("");
   const [showSpots, setShowSpots] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const updateTime = () => {
@@ -38,8 +39,25 @@ export default function LocationBadge() {
     return () => clearInterval(interval);
   }, []);
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setShowSpots(false);
+      }
+    };
+
+    if (showSpots) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showSpots]);
+
   return (
-    <div className="relative flex flex-col items-end">
+    <div ref={dropdownRef} className="relative flex flex-col items-end">
       <button
         onClick={() => setShowSpots(!showSpots)}
         className="flex items-center gap-1.5 md:gap-2 px-2 md:px-3 py-1.5 md:py-2 border border-foreground/10 bg-background/80 backdrop-blur-sm

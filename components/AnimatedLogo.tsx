@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const placesLived = [
   { name: "Kerala, India", emoji: "🌴", vibe: "home home", x: 10 },
@@ -14,6 +13,7 @@ export default function AnimatedLogo() {
   const [isHovered, setIsHovered] = useState(false);
   const [showPlaces, setShowPlaces] = useState(false);
   const [animating, setAnimating] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -25,6 +25,24 @@ export default function AnimatedLogo() {
     }
     setShowPlaces(!showPlaces);
   };
+
+  // Close modal when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        setShowPlaces(false);
+        setAnimating(false);
+      }
+    };
+
+    if (showPlaces) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showPlaces]);
 
   return (
     <div className="relative">
@@ -59,7 +77,7 @@ export default function AnimatedLogo() {
 
       {/* Journey animation */}
       {showPlaces && (
-        <div className="absolute top-full left-0 mt-8 w-[90vw] max-w-[550px] md:w-[550px] border border-foreground/10 bg-background shadow-lg 
+        <div ref={modalRef} className="absolute top-full left-0 mt-8 w-[90vw] max-w-[550px] md:w-[550px] border border-foreground/10 bg-background shadow-lg 
           animate-fadeIn z-50 p-4 md:p-6">
           <div className="mb-6">
             <p className="text-[11px] font-mono text-accent uppercase tracking-wider">
