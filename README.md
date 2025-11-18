@@ -4,13 +4,12 @@ A minimal, elegant personal portfolio and notes website template built with Next
 
 ## ✨ Features
 
-- 🎨 **Warm Editorial Design**: Beige background with brown accents, inspired by high-end editorial websites
+- 🎨 **Warm Editorial Design**: Warm oatmeal color pallette, font inspired by high-end editorial websites
 - 📝 **Notes/Blog Section**: Substack-style blog with reading time estimates
 - 💼 **Work Experience Timeline**: Showcase your professional journey with company logos
 - 🎓 **Education Section**: Highlight your academic background
 - 🚀 **Project Showcase**: Grid layout with support for images, videos, and interactive carousels
-- 🎮 **Easter Eggs**: Hidden animations and interactions (Konami code, journey animation, location favorites)
-- 📊 **Analytics Ready**: Integrated with Vercel Analytics
+- 🎮 **Easter Eggs**: Hidden animations and interactions (journey animation, location favorites)
 - 🎭 **Smooth Animations**: Scroll-triggered effects and micro-interactions
 - 📱 **Fully Responsive**: Mobile-first design that looks great on all devices
 
