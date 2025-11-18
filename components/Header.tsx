@@ -29,6 +29,12 @@ export default function Header() {
                   <span className="absolute inset-x-0 -bottom-0.5 h-px bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 </Link>
               </li>
+              <li>
+                <Link href="/reads" className="link-underline text-[12px] md:text-[14px] font-mono relative group">
+                  <span className="relative z-10 transition-colors group-hover:text-accent">Reads</span>
+                  <span className="absolute inset-x-0 -bottom-0.5 h-px bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                </Link>
+              </li>
             </ul>
             
             {/* Location badge */}
