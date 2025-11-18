@@ -15,6 +15,8 @@ interface ProjectCardProps {
   video?: string;
   techStack?: string[];
   githubUrl?: string;
+  hasExplore?: boolean;
+  onExplore?: () => void;
 }
 
 export default function ProjectCard({
@@ -30,6 +32,8 @@ export default function ProjectCard({
   video,
   techStack = [],
   githubUrl,
+  hasExplore = false,
+  onExplore,
 }: ProjectCardProps) {
   const content = (
     <article className="group cursor-pointer border border-foreground/10 p-4 md:p-8 
@@ -116,6 +120,21 @@ export default function ProjectCard({
 
       {/* Links */}
       <div className="mt-4 flex items-center gap-4">
+        {hasExplore && onExplore && (
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              onExplore();
+            }}
+            className="flex items-center gap-2 text-[12px] font-mono text-foreground hover:text-accent transition-colors"
+          >
+            <span>Explore</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </button>
+        )}
         {href && (
           <a
             href={href}

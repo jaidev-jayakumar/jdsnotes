@@ -1,8 +1,13 @@
+'use client';
+
 import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
 import TimelineCard from "@/components/TimelineCard";
+import VentilatorModal from "@/components/VentilatorModal";
+import { useState } from "react";
 
 export default function Home() {
+  const [isVentilatorModalOpen, setIsVentilatorModalOpen] = useState(false);
   return (
     <>
       <Section>
@@ -156,9 +161,16 @@ export default function Home() {
             tags={["Hardware", "IoT"]}
             video="/ventilator.mp4"
             techStack={["Arduino", "C++", "Sensor interfacing", "NodeMCU", "Microcontroller programming"]}
+            hasExplore={true}
+            onExplore={() => setIsVentilatorModalOpen(true)}
           />
         </div>
       </Section>
+
+      <VentilatorModal 
+        isOpen={isVentilatorModalOpen}
+        onClose={() => setIsVentilatorModalOpen(false)}
+      />
     </>
   );
 }
