@@ -411,6 +411,10 @@ Feel free to fork this template and make it your own! If you build something coo
 - Review Next.js 14 docs for App Router specifics
 - Tailwind CSS docs for styling questions
 
+## 📄 License
+
+MIT License - feel free to use this project as a template for your own portfolio. If you do use it, I'd love to see what you build! Tag me [@jaidev_01](https://x.com/jaidev_01) or drop a link.
+
 ---
 
 **Built with ❤️ using Next.js and Tailwind CSS**
