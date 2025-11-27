@@ -100,7 +100,7 @@ export default function Home() {
               <>
                 Duolingo for your bloodwork. Scaled to{' '}
                 <span className="text-accent font-semibold">2k+ users</span>, Product Hunt{' '}
-                <span className="text-accent font-semibold">#14</span> product of the day. Applied to YC (didn't make it), received $2k microgrant from LocalHost.
+                <span className="text-accent font-semibold">#14</span> product of the day. Received $2k microgrant from LocalHost.
               </>
             }
             href="https://bloodrec.com"

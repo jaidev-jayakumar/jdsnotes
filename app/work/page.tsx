@@ -1,6 +1,9 @@
 import Section from "@/components/Section";
 import NoteCard from "@/components/NoteCard";
 
+// Feature flags for notes visibility
+const SHOW_APPLIED_TO_ONE_SCHOOL = false;
+
 export default function WorkPage() {
   return (
     <>
@@ -20,13 +23,15 @@ export default function WorkPage() {
             href="/work/optimizing-for-maximum-throughput"
             readTime="4 min read"
           />
-          <NoteCard
-            title="applied to one school three days before the deadline and somehow ended up in san francisco"
-            date="11 Nov"
-            excerpt="i applied to one school. three days before the deadline. didn't even know if i wanted to go. spent months thinking success was about control. turns out it's about knowing when to let go and just move."
-            href="/work/applied-to-one-school"
-            readTime="5 min read"
-          />
+          {SHOW_APPLIED_TO_ONE_SCHOOL && (
+            <NoteCard
+              title="applied to one school three days before the deadline and somehow ended up in san francisco"
+              date="11 Nov"
+              excerpt="i applied to one school. three days before the deadline. didn't even know if i wanted to go. spent months thinking success was about control. turns out it's about knowing when to let go and just move."
+              href="/work/applied-to-one-school"
+              readTime="5 min read"
+            />
+          )}
           <NoteCard
             title="somewhere between momentum and meaning"
             date="9 Nov"
