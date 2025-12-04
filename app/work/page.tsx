@@ -17,6 +17,13 @@ export default function WorkPage() {
 
         <div className="max-w-3xl">
           <NoteCard
+            title="the commute i didn't want to lose"
+            date="4 Dec"
+            excerpt="caltrain has a different energy than the new york subway. different than airports too. same people, same time, every day. but nobody talks. everyone's chosen their own way to spend the hour."
+            href="/work/the-commute-i-didnt-want-to-lose"
+            readTime="2 min read"
+          />
+          <NoteCard
             title="optimizing for maximum throughput per unit time"
             date="15 Nov"
             excerpt="i've had people tell me i need a break. like genuinely concerned, 'you're gonna burn out' type stuff. but here's the thing — i've never felt like that. my mind is restless. i want to keep at it."
