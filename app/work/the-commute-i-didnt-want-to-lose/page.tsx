@@ -35,14 +35,16 @@ export default function NotePage() {
             </p>
 
             {/* Featured Image */}
-            <div className="relative my-8 flex justify-center">
-              <Image
-                src="/caltrain.jpg"
-                alt="caltrain"
-                width={400}
-                height={300}
-                className="max-w-[70%] h-auto"
-              />
+            <div className="relative my-10 flex justify-center">
+              <div className="shadow-[0_4px_20px_rgba(0,0,0,0.08),0_8px_40px_rgba(0,0,0,0.06)]">
+                <Image
+                  src="/caltrain.jpg"
+                  alt="caltrain"
+                  width={400}
+                  height={600}
+                  className="max-w-[280px] md:max-w-[320px] h-auto"
+                />
+              </div>
             </div>
 
             <p>
