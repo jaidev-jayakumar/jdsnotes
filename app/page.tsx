@@ -21,12 +21,20 @@ export default function Home() {
         <div className="mb-16 md:mb-20">
           <TimelineCard
             title="Product Operations"
+            company="Stedi · Full-time"
+            description="Working on the world's only programmable healthcare clearinghouse for claims, eligibility checks, and more."
+            date="Dec 2025 - Present"
+            location="San Francisco, California"
+            logo="/stedi-logo.jpg"
+            highlighted
+          />
+          <TimelineCard
+            title="Product Operations"
             company="Commure · Full-time"
-            description="Worked on net new launches - onboarding to go live; currently driving tooling enablement internal & customer facing. Key pain point I help address: 'this task takes too much time'"
-            date="Mar 2024 - Present"
+            description="Worked on net new launches - onboarding to go live; drove tooling enablement internally & customer facing. Key pain point I helped address: 'this task takes too much time'"
+            date="Mar 2024 - Dec 2025"
             location="Mountain View, California"
             logo="/commure-logo.jpg"
-            highlighted
           />
           <TimelineCard
             title="Product Strategy - New Verticals"
