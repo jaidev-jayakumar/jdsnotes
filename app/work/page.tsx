@@ -17,6 +17,20 @@ export default function WorkPage() {
 
         <div className="max-w-3xl">
           <NoteCard
+            title="intelligence is on tap. authenticity isn't."
+            date="10 Jan"
+            excerpt="anyone can build an app with a prompt. does it actually solve a real problem? or does it have that same vibe coded design you've seen a thousand times? intelligence is commoditized. authenticity is not."
+            href="/work/intelligence-is-on-tap-authenticity-isnt"
+            readTime="4 min read"
+          />
+          <NoteCard
+            title="a christmas morning reflection…"
+            date="25 Dec"
+            excerpt="as a kid i used to despise going to social events at others' homes with my family. as an adult living 9k miles away, all i want is to be invited for a lavish christmas meal where you get a sense of family pop."
+            href="/work/a-christmas-morning-reflection"
+            readTime="3 min read"
+          />
+          <NoteCard
             title="the commute i didn't want to lose"
             date="4 Dec"
             excerpt="caltrain has a different energy than the new york subway. different than airports too. same people, same time, every day. but nobody talks. everyone's chosen their own way to spend the hour."
