@@ -17,6 +17,13 @@ export default function WorkPage() {
 
         <div className="max-w-3xl">
           <NoteCard
+            title="broke my sugar fast on my 27th with a sorbet cake"
+            date="8 Feb"
+            excerpt="i turned 27 last week. always loved birthdays in the tiniest of ways — never a fan of celebrating growing older. 27 feels different. 2026 feels different. don't ask what the year needs. ask what today needs."
+            href="/work/twenty-seven"
+            readTime="4 min read"
+          />
+          <NoteCard
             title="intelligence is on tap. authenticity isn't."
             date="10 Jan"
             excerpt="anyone can build an app with a prompt. does it actually solve a real problem? or does it have that same vibe coded design you've seen a thousand times? intelligence is commoditized. authenticity is not."
