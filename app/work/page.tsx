@@ -17,6 +17,13 @@ export default function WorkPage() {
 
         <div className="max-w-3xl">
           <NoteCard
+            title="the quiet superpowers you can build by cutting out the noise"
+            date="22 Mar"
+            excerpt="for 22 years i lived with people around me. i could never find myself alone. living alone helps you find that person. you don't find your values, you notice them."
+            href="/work/quiet-superpowers-cutting-out-noise"
+            readTime="6 min read"
+          />
+          <NoteCard
             title="broke my sugar fast on my 27th with a sorbet cake"
             date="8 Feb"
             excerpt="i turned 27 last week. always loved birthdays in the tiniest of ways — never a fan of celebrating growing older. 27 feels different. 2026 feels different. don't ask what the year needs. ask what today needs."
