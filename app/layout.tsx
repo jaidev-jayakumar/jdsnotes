@@ -26,6 +26,28 @@ const libreBaskerville = Libre_Baskerville({
 export const metadata: Metadata = {
   title: "Jaidev Jayakumar",
   description: "Product Operations at Commure",
+  metadataBase: new URL("https://jaidevjayakumar.com"),
+  openGraph: {
+    title: "Jaidev Jayakumar",
+    description: "Product Operations at Commure",
+    url: "https://jaidevjayakumar.com",
+    siteName: "Jaidev Jayakumar",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Jaidev Jayakumar",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jaidev Jayakumar",
+    description: "Product Operations at Commure",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
