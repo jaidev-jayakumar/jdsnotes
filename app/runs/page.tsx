@@ -16,6 +16,7 @@ const runs = [
     name: 'Evening Run',
     description: 'Through Golden Gate Park and back — quiet streets, golden hour light.',
     date: 'Apr 27, 2026',
+    stravaUrl: 'https://www.strava.com/activities/18273541540',
     stats: [
       { label: 'Distance', value: '10.02 km' },
       { label: 'Time', value: '48:27' },
@@ -43,6 +44,7 @@ const runs = [
     name: 'Afternoon Run',
     description: 'A different slice of the city — flatter, faster.',
     date: 'May 3, 2026',
+    stravaUrl: 'https://www.strava.com/activities/18365513541',
     stats: [
       { label: 'Distance', value: '7.44 km' },
       { label: 'Time', value: '35:46' },
@@ -67,6 +69,7 @@ const runs = [
     name: 'San Diego Run',
     description: 'A flat, fast 5k along the bay.',
     date: 'Dec 28, 2025',
+    stravaUrl: 'https://www.strava.com/activities/16865964687',
     stats: [
       { label: 'Distance', value: '5.06 km' },
       { label: 'Time', value: '26:16' },
@@ -114,6 +117,16 @@ export default function RunsPage() {
                   <div>
                     <p className="font-mono text-[13px] font-semibold">{run.name}</p>
                     <p className="font-mono text-[11px] text-muted mt-0.5">{run.date}</p>
+                    {run.stravaUrl && (
+                      <a
+                        href={run.stravaUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 mt-2 text-[10px] font-mono text-accent hover:opacity-70 transition-opacity"
+                      >
+                        View on Strava ↗
+                      </a>
+                    )}
                   </div>
                   <p className="font-mono text-[11px] text-muted max-w-xs text-right hidden md:block">
                     {run.description}
